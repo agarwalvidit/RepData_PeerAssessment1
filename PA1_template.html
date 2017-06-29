@@ -141,9 +141,9 @@ if(!file.exists(&quot;activity.csv&quot;)) {
   download.file(fileUrl, destfile=zipFile, method=&quot;curl&quot;)
   unzip(zipFile)
   file.remove(zipFile)
-}</code></pre>
-<pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>ActivityData &lt;- read.csv(&quot;activity.csv&quot;, header = TRUE, na.strings = &quot;NA&quot;, stringsAsFactors = FALSE) 
+}
+
+ActivityData &lt;- read.csv(&quot;activity.csv&quot;, header = TRUE, na.strings = &quot;NA&quot;, stringsAsFactors = FALSE) 
 ActivityData$date &lt;- as.Date(ActivityData$date, &quot;%Y-%m-%d&quot;)</code></pre>
 <p><strong>Lets observe the structure of file</strong></p>
 <pre class="r"><code> str(ActivityData)  </code></pre>
